@@ -42,9 +42,6 @@ Xend_sort = Xend(id1)
 dataSections = reshape(Xend_sort,n,[]); 
 M = mean(dataSections)
 
-yini       = quantile (Xini, q) 
-yend       = quantile (Xend, q) 
-
 for p    = 1:n
 g(p)     = Mend(p)/Mini(p) -1; %gic
 %lg(p)     = log(yend(p))-log(yini(p));
