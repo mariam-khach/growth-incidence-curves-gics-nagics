@@ -23,8 +23,8 @@ sXini = sort(Xini);
 sXend = sort(Xend);
 dataSec_ini = reshape(sXini,n,[]);
 dataSec_end = reshape(sXend,n,[]);
-Mini = max(dataSec_ini)
-Mend = max(dataSec_end)
+Mini = mean(dataSec_ini)
+Mend = mean(dataSec_end)
 
 yini       = quantile (Xini, q) 
 yend       = quantile (Xend, q) 
