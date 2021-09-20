@@ -21,16 +21,10 @@ plot(tc, X);
 %   plot(tc,X(:,3),'r');
 %   plot(tc,X(:,4),'c');
 %   plot(tc,X(:,5),'g');
-%   plot(tc,X(:,6),'c');
-%   plot(tc,X(:,7),'g');
-%   plot(tc,X(:,8),'b');
-%   plot(tc,X(:,9),'y');
 %   hold off
  xlabel('Time', 'FontSize', 14);
  ylabel('Wealth', 'FontSize', 14);
- title('Simulations of GBM - N=10^4, 9 randomly chosen trajectories ', 'FontSize', 15);
-%ylim([0 255])
-
+ title('Simulations of GBM - N=10^4, 5 randomly chosen trajectories ', 'FontSize', 15);
 %plot(tc, EX, 'r-*')
 %hold off
 l=10;
@@ -52,10 +46,10 @@ yini       = quantile (Xini, q)
 yend       = quantile (Xend, q) 
 
 for p    = 1:n
-g(p)     = Mend(p)/Mini(p) -1;
+g(p)     = Mend(p)/Mini(p) -1; %gic
 %lg(p)     = log(yend(p))-log(yini(p));
-ng(p)      = M(p)/Mini(p)-1;        %Xend_sort(p*(N/(n)))
-gt(p)     = exp(mu_bar*(T)+norminv(q(p))*sigma*sqrt(T))/exp(mu_bar*l+norminv(q(p))*sigma*sqrt(l)) -1;
+ng(p)      = M(p)/Mini(p)-1;        %Xend_sort(p*(N/(n))) %nagic
+gt(p)     = exp(mu_bar*(T)+norminv(q(p))*sigma*sqrt(T))/exp(mu_bar*l+norminv(q(p))*sigma*sqrt(l)) -1; %analytical gic
 end
 plot(q*100,gt*100,'-','LineWidth', 3);
 hold on
