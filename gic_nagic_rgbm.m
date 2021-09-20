@@ -26,8 +26,6 @@ dataSec_end = reshape(sXend,n,[]);
 Mini = mean(dataSec_ini)
 Mend = mean(dataSec_end)
 
-%yini       = quantile (Xini, q) 
-%yend       = quantile (Xend, q) 
 
 [Xini_sort id1] = sort (Xini)     % for NAGIC 
 Xend_sort = Xend(id1)
