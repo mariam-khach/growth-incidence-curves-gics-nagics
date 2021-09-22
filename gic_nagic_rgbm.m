@@ -18,7 +18,7 @@ plot(tc, X);
 l=10;
 
 Xini       = X(l*(M/T), :)  % wealth at time t=1  (as at t=0 everyone has X0 money)
-Xend       = X(T*(M/T), :)    % wealth at tim1 t=2 (final time)
+Xend       = X(T*(M/T), :)    % wealth at time t=2 (final time)
 sXini = sort(Xini);
 sXend = sort(Xend);
 dataSec_ini = reshape(sXini,n,[]);
